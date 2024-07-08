@@ -2,6 +2,8 @@ import React from "react";
 import "./skills.css";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
+import Mobile from "./Mobile";
+import Design from "./Design";
 
 const Skills = () => {
     return (
@@ -10,8 +12,10 @@ const Skills = () => {
             <span className="section_subtitle">My technical level</span>
 
             <div className="skills_container container grid">
+                <Mobile />
                 <Frontend />
                 <Backend />
+                <Design />
             </div>
         </section>
     )
