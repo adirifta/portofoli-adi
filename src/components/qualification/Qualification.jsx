@@ -28,12 +28,13 @@ const Qualification = () => {
                     <div className={toggleState === 1 ? "qualification_content qualification_content-active" : "qualification_content"}>
                         <div className="qualification_data">
                             <div>
-                                <h3 className="qualification_title">Web Development</h3>
+                                <h3 className="qualification_title">Mobile Android</h3>
                                 <span className="qualification_subtitle">Semarang State Polytechnic - Institute</span>
                                 <div className="qualification_calender">
                                     <i className="uil uil-calender-alt"></i> 2021 - Present
                                 </div>
                             </div>
+                           
 
                             <div>
                                 <span className="qualification_rounder"></span>
@@ -50,7 +51,7 @@ const Qualification = () => {
                             </div>
 
                             <div>
-                                <h3 className="qualification_title">Mobile Android</h3>
+                                <h3 className="qualification_title">Web Development</h3>
                                 <span className="qualification_subtitle">Semarang State Polytechnic - Institute</span>
                                 <div className="qualification_calender">
                                     <i className="uil uil-calender-alt"></i> 2021 - Present
@@ -94,11 +95,27 @@ const Qualification = () => {
                     {/* Experience */}
                     <div className={toggleState === 2 ? "qualification_content qualification_content-active" : "qualification_content"}>
                         <div className="qualification_data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification_rounder"></span>
+                                <span className="qualification_line"></span>
+                            </div>
+
+                            <div>
+                                <h3 className="qualification_title">IT APP Developer</h3>
+                                <span className="qualification_subtitle">DB Klik - Raya Tenggilis Mejoyo No.AA-3 Kali Rungkut Kec Rungkut Surabaya Jawa Timur</span>
+                                <div className="qualification_calender">
+                                    <i className="uil uil-calender-alt"></i> 17 Sept 2024 - Finished
+                                </div>
+                            </div>
+                        </div>
+                        <div className="qualification_data">
                             <div>
                                 <h3 className="qualification_title">Independent Study of Mobile Android Developer & UI/UX</h3>
                                 <span className="qualification_subtitle">Infinite Learning Indonesia - Batam, Kepulauan Riau, Indonesia</span>
                                 <div className="qualification_calender">
-                                    <i className="uil uil-calender-alt"></i> 16 Febuari 2024 - Present
+                                    <i className="uil uil-calender-alt"></i> 16 Feb 2024 - 28 Jun 2024
                                 </div>
                             </div>
 
@@ -117,26 +134,44 @@ const Qualification = () => {
                             </div>
 
                             <div>
-                                <h3 className="qualification_title">Junior Mobile Programmer</h3>
-                                <span className="qualification_subtitle">Digital Talent Scholarship - Kominfo</span>
+                                <h3 className="qualification_title">Android Developer</h3>
+                                <span className="qualification_subtitle">IDCamp - Indosat Ooredoo Hutchison Digital Camp</span>
                                 <div className="qualification_calender">
-                                    <i className="uil uil-calender-alt"></i> Juni 2023
+                                    <i className="uil uil-calender-alt"></i> August 2024
                                 </div>
                             </div>
                         </div>
 
                         <div className="qualification_data">
                             <div>
-                                <h3 className="qualification_title">Junior Graphic Designer</h3>
+                                <h3 className="qualification_title">Junior Mobile Programmer</h3>
                                 <span className="qualification_subtitle">Digital Talent Scholarship - Kominfo</span>
                                 <div className="qualification_calender">
-                                    <i className="uil uil-calender-alt"></i> November 2022
+                                    <i className="uil uil-calender-alt"></i> June 2023
                                 </div>
+                                
                             </div>
 
                             <div>
                                 <span className="qualification_rounder"></span>
                                 <span className="qualification_line"></span>
+                            </div>
+                        </div>
+
+                        <div className="qualification_data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification_rounder"></span>
+                                <span className="qualification_line"></span>
+                            </div>
+
+                            <div>
+                                <h3 className="qualification_title">Junior Graphic Designer</h3>
+                                <span className="qualification_subtitle">Digital Talent Scholarship - Kominfo</span>
+                                <div className="qualification_calender">
+                                    <i className="uil uil-calender-alt"></i> November 2022
+                                </div>
                             </div>
                         </div>
                     </div>
