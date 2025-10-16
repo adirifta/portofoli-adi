@@ -32,3 +32,4 @@ jobs:
         local-dir: build/
         server-dir: /path/on/server/
         git-ftp-args: --insecure
+        
