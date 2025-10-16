@@ -28,6 +28,7 @@ const Home = () => {
   
     if (loading) return <div className="about_container container grid">Loading...</div>;
     if (error) return <div className="about_container container grid">{error}</div>;
+    if (!aboutData) return <div className="about_container container grid">No data available</div>;
 
     return (
         <section className="home section" id="home">
