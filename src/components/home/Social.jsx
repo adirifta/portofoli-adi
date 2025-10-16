@@ -1,17 +1,17 @@
 import React from "react";
 
-const Social = () => {
+const Social = ({ aboutData }) => {
     return (
         <div className="home_social">
-            <a href="https://www.instagram.com/adirifta/" className="home_social-icon" target="_blank" rel="noreferrer">
+            <a href={aboutData.instagram_url} className="home_social-icon" target="_blank" rel="noreferrer">
                 <i class="uil uil-instagram"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/adirifta/" className="home_social-icon" target="_blank" rel="noreferrer">
+            <a href={aboutData.linkedin_url} className="home_social-icon" target="_blank" rel="noreferrer">
                 <i class="uil uil-linkedin-alt"></i>
             </a>
 
-            <a href="https://github.com/adirifta/" className="home_social-icon" target="_blank" rel="noreferrer">
+            <a href={aboutData.github_url} className="home_social-icon" target="_blank" rel="noreferrer">
                 <i class="uil uil-github-alt"></i>
             </a>
         </div>

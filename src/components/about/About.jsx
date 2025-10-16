@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./about.css";
 import AboutImg from "../../assets/adi.png";
 import CV from "../../assets/CV_Adi.pdf";
 import Info from "./Info";
+import { aboutAPI } from "../../services/api";
 
 const About = () => {
+  const [aboutData, setAboutData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchAboutData = async () => {
+      try {
+        const response = await aboutAPI.getAbout();
+        setAboutData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load about information");
+        setLoading(false);
+        console.error("Error fetching about data:", err);
+      }
+    };
+
+    fetchAboutData();
+  }, []);
+
+  if (loading) return <div className="about_container container grid">Loading...</div>;
+  if (error) return <div className="about_container container grid">{error}</div>;
+
     return (
         <section className="about section" id="about">
             <h2 className="section_title">About Me</h2>
@@ -12,12 +36,14 @@ const About = () => {
 
             <div className="about_container container grid">
                 <img src={AboutImg} alt="" className="about_img" />
+                {/* <img src={aboutData?.image_url || AboutImg} alt="" className="about_img" /> */}
 
                 <div className="about_data">
                     <Info />
 
-                    <p className="about_description">I am also skilled in the use of Android Studio and have experience in application development using modern architecture. My expertise involves user interface (UI/UX) design. I am always eager to learn new things and continue to improve my skills in Android development.</p>
-
+                <p className="about_description">
+                  {aboutData?.description_panjang}
+                </p>
                     <a download="" href={CV} className="button button--flex">Download CV
                     <svg
                 class="button__icon"

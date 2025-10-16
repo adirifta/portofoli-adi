@@ -1,9 +1,9 @@
 import React from "react";
 
-const Data = () => {
+const Data = ({ aboutData }) => {
     return (
        <div className="home_data">
-            <h1 className="home_title">Adi Rifta
+            <h1 className="home_title">{aboutData?.name}
             <svg
                   width="36"
                   height="36"
@@ -54,8 +54,8 @@ const Data = () => {
                   ></path>
                 </svg>
             </h1>
-            <h3 className="home_subtitle">Mobile & Web Developer</h3>
-            <p className="home_description">I am a talented Android Developer with expertise in developing innovative and responsive mobile applications.</p>
+            <h3 className="home_subtitle">{aboutData?.title}</h3>
+            <p className="home_description">{aboutData?.description_singkat}</p>
 
             <a href="#contact" className="button button--flex">
                 Say Hello
