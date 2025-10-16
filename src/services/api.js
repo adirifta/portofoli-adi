@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+// const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  // baseURL: API_BASE_URL,
+  baseURL: "https://backend-portfolio-800790954197.asia-southeast1.run.app/api",
   headers: {
     'Content-Type': 'application/json',
   },
