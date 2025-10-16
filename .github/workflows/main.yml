@@ -18,18 +18,21 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build the React app
       run: npm run build
 
-    - name: Deploy to FTP server
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+    - name: Debug build output
+      run: ls -la build
+
+    - name: Deploy to FTP (cPanel public_html)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: build/
-        server-dir: ./
-        git-ftp-args: --insecure
-        
+        server-dir: ./               # karena root FTP kamu sudah di public_html
+        dangerous-clean-slate: true  # hapus file lama biar sinkron bersih
+        log-level: verbose           # tampilkan log detail
